@@ -1,37 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
+var buttonList = ["code", "docs", "webdev", "devops"];
+
+var toolsBucket = {
+  code: {
+    tools: ["vscode", "atom", "sublime", "notepad++"],
+    ratings: ["5/5", "4/5", "3.5/5", "3/5"]
+  },
+
+  docs: {
+    tools: ["mdn", "stackoverflow", "w3schools"],
+    ratings: ["5/5", "4.5/5", "4/5"]
+  },
+
+  webdev: {
+    tools: ["chrome devtools", "codesandbox", "codepen", "netlify"],
+    ratings: ["5/5", "4.5/5", "4/5", "4/5"]
+  },
+
+  devops: {
+    tools: ["git", "docker", "kubernetes"],
+    ratings: ["5/5", "4.5/5", "4/5"]
+  }
+};
+
 export default function App() {
+  const [name, setName] = useState("webdev");
+
+  function clickEventHandler(item) {
+    // var tools = toolsBucket[item].tools
+    // var ratings = toolsBucket[item].ratings
+    // console.log("Tools :",  tools);
+    // console.log("Ratings :", ratings);
+    setName(item);
+  }
+
   return (
     <div className="App">
-      <div className="header"> devTools
-      <p>some recommended dev tools</p>
+      <div className="header">
+        {" "}
+        devTools
+        <p>some recommended developer's tools</p>
       </div>
-    
-    <main>
-    
-    <div className="leftPanel">
-      {/* <p><strong>Click to see recommendations</strong></p> */}
-      <button className="leftPanelButton">code</button>
-      <button className="leftPanelButton">docs</button>
-      <button className="leftPanelButton">webdev</button>
-      <button className="leftPanelButton">devops</button>
-    </div>
 
-    <div className="rightPanel">
-      {/* This is right leftPanel */}
-     
-     <ul>
-       <li>recommendations<span>5/5</span></li>
-       <li>recommendations<span>4/5</span></li>
-       <li>recommendations<span>4.5/5</span></li>
-       <li>recommendations<span>3/5</span></li>
-     </ul>
+      <main>
+        <div className="leftPanel">
+          {/* this is the left panel */}
+          <p>Click to get started</p>
 
-    </div>
+          {buttonList.map((item) => {
+            return (
+              <button
+                className="leftPanelButton"
+                key={item}
+                onClick={() => clickEventHandler(item)}
+              >
+                {item}{" "}
+              </button>
+            );
+          })}
+        </div>
 
-   </main>
-   
+        <div className="rightPanel">
+          {/* This is the right Panel */}
+
+          <p>Recommendations: </p>
+
+          <ul>
+            {toolsBucket[name].tools.map(function (item, index) {
+              return (
+                <li key={item}>
+                  {" "}
+                  {item}
+                  {/* access the ratings using index */}
+                  <span> {toolsBucket[name].ratings[index]} </span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </main>
     </div>
   );
 }
