@@ -5,22 +5,22 @@ var buttonList = ["code", "docs", "webdev", "devops"];
 
 var toolsBucket = {
   code: {
-    tools: ["vscode", "atom", "sublime", "notepad++"],
+    tools: ["VSCode", "Atom", "Sublime", "Notepad++"],
     ratings: ["5/5", "4/5", "3.5/5", "3/5"]
   },
 
   docs: {
-    tools: ["mdn", "stackoverflow", "w3schools"],
+    tools: ["MDN", "stackoverflow", "W3Schools"],
     ratings: ["5/5", "4.5/5", "4/5"]
   },
 
   webdev: {
-    tools: ["chrome devtools", "codesandbox", "codepen", "netlify"],
+    tools: ["Chrome DevTools", "codesandbox", "codepen", "Netlify"],
     ratings: ["5/5", "4.5/5", "4/5", "4/5"]
   },
 
   devops: {
-    tools: ["git", "docker", "kubernetes"],
+    tools: ["Git", "Docker", "kubernetes"],
     ratings: ["5/5", "4.5/5", "4/5"]
   }
 };

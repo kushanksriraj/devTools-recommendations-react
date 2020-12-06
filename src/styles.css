@@ -3,12 +3,12 @@
   --secondary-color :#c7c2c2;
 }
 
-body {
-  margin : 0;
-}
-
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin : 0;
 }
 
 .App {
@@ -18,21 +18,21 @@ body {
 }
 
 .header {
- width: 100%;
- margin: auto;
- margin-top: 2rem;
- padding: 1rem;
- text-align: center;
- font-size: x-large;
- font-weight: bold;
- border-bottom: 1px solid var(--secondary-color);
- margin-bottom: 10px;
+  width: 100%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 10px;
 }
 
 .header p {
-font-weight: normal;
-font-size: medium;
-margin-top: 0.5rem;
+  font-weight: normal;
+  font-size: medium;
+  margin-top: 0.5rem;
 }
 
 main {
@@ -56,8 +56,6 @@ main {
 
 }
 
-
-
 .leftPanelButton {
   display: block;
   margin: 5vh auto;
@@ -69,17 +67,12 @@ main {
   font-size: larger;
 }
 
-
 .rightPanel {
-float: right;
-width: 65%;
-height: 70%;
-padding: 1rem;
-padding-left: 2rem;
-}
-
-.rightPanel p {
-  
+  float: right;
+  width: 65%;
+  height: 70%;
+  padding: 1rem;
+  padding-left: 2rem;
 }
 
 .rightPanel ul {
@@ -100,8 +93,22 @@ padding-left: 2rem;
 }
 
 .rightPanel li span {
-font-size: small;
-font-weight: lighter;
-/* margin-left: 1rem; */
-margin-left: 0.5rem;
+  font-size: small;
+  font-weight: lighter;
+  /* margin-left: 1rem; */
+  margin-left: 0.5rem;
+}
+
+footer {
+  bottom: 0;
+  position : fixed;
+  width: 100%;
+  padding: 0.2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+footer a {
+text-decoration: none;
+color: darkblue;
 }
