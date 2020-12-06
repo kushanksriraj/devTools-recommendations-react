@@ -15,7 +15,7 @@ var toolsBucket = {
   },
 
   webdev: {
-    tools: ["Chrome DevTools", "codesandbox", "codepen", "Netlify"],
+    tools: ["Chrome devtools", "codesandbox", "codepen", "Netlify"],
     ratings: ["5/5", "4.5/5", "4/5", "4/5"]
   },
 
