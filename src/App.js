@@ -26,14 +26,14 @@ var toolsBucket = {
 };
 
 export default function App() {
-  const [name, setName] = useState("webdev");
+  const [toolName, setToolName] = useState("webdev");
 
   function clickEventHandler(item) {
     // var tools = toolsBucket[item].tools
     // var ratings = toolsBucket[item].ratings
     // console.log("Tools :",  tools);
     // console.log("Ratings :", ratings);
-    setName(item);
+    setToolName(item);
   }
 
   return (
@@ -68,13 +68,13 @@ export default function App() {
           <p>Recommendations: </p>
 
           <ul>
-            {toolsBucket[name].tools.map(function (item, index) {
+            {toolsBucket[toolName].tools.map(function (item, index) {
               return (
                 <li key={item}>
                   {" "}
                   {item}
                   {/* access the ratings using index */}
-                  <span> {toolsBucket[name].ratings[index]} </span>
+                  <span> {toolsBucket[toolName].ratings[index]} </span>
                 </li>
               );
             })}
