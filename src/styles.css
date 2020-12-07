@@ -20,7 +20,7 @@ body {
 .header {
   width: 100%;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 1rem;
   text-align: center;
   font-size: x-large;
@@ -62,7 +62,7 @@ main {
   width: 90px;
   height: 45px;
   border : 1px solid var(--primary-color);
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #f5fffd;
   font-size: larger;
   cursor: pointer;
@@ -88,6 +88,8 @@ main {
   margin: 3vh auto;
   padding: 1rem;
   text-align: center;
+  background-color: #fcfbfb;
+  /* border: 1px solid var(--secondary-color); */
   border: 1px solid var(--primary-color);
   border-radius: 3px;
   font-size: medium;

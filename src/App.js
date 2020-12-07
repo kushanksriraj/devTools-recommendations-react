@@ -41,7 +41,7 @@ export default function App() {
       <div className="header">
         {" "}
         devTools
-        <p>some recommended developer's tools</p>
+        <p>some recommended developer tools</p>
       </div>
 
       <main>
