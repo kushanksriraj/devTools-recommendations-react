@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-var buttonList = ["code", "docs", "webdev", "devops"];
+const buttonList = ["code", "docs", "webdev", "devops"];
 
-var toolsBucket = {
+const toolsBucket = {
   code: {
     tools: ["VSCode", "Atom", "Sublime", "Notepad++"],
     ratings: ["5/5", "4/5", "3.5/5", "3/5"]
@@ -28,52 +28,37 @@ var toolsBucket = {
 export default function App() {
   const [toolName, setToolName] = useState("webdev");
 
-  function clickEventHandler(item) {
-    // var tools = toolsBucket[item].tools
-    // var ratings = toolsBucket[item].ratings
-    // console.log("Tools :",  tools);
-    // console.log("Ratings :", ratings);
-    setToolName(item);
-  }
-
   return (
     <div className="App">
       <div className="header">
-        {" "}
         devTools
         <p>some recommended developer tools</p>
       </div>
 
       <main>
         <div className="leftPanel">
-          {/* this is the left panel */}
           <p>Click to get started</p>
 
-          {buttonList.map((item) => {
+          {buttonList.map((item, index) => {
             return (
               <button
                 className="leftPanelButton"
-                key={item}
-                onClick={() => clickEventHandler(item)}
+                key={index}
+                onClick={() => setToolName(item)}
               >
-                {item}{" "}
+                {item}
               </button>
             );
           })}
         </div>
 
         <div className="rightPanel">
-          {/* This is the right Panel */}
-
           <p>Recommendations: </p>
-
           <ul>
-            {toolsBucket[toolName].tools.map(function (item, index) {
+            {toolsBucket[toolName].tools.map((item, index) => {
               return (
-                <li key={item}>
-                  {" "}
+                <li key={index}>
                   {item}
-                  {/* access the ratings using index */}
                   <span> {toolsBucket[toolName].ratings[index]} </span>
                 </li>
               );
